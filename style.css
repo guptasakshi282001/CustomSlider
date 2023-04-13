@@ -1,0 +1,106 @@
+*{
+  box-sizing: border-box
+}
+
+body{
+  font-family: Verdana, sans-serif; 
+  margin:0;
+}
+
+.mySlides {
+  display: none
+}
+
+img {
+  vertical-align: middle;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: 6%;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 34px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dots{
+  text-align: center;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: slide;
+  animation-duration: 1.5s;
+}
+
+@media (max-width:768px){
+  .slideshow-container{
+    width: 130%;
+    margin-top: 23%;
+  }
+
+  .dots{
+    margin-left: 30%;
+  }  
+
+  img{
+    width: 96%;
+    margin-left: 2%;
+  }
+
+  .prev , .next{
+    margin-left: 2%;
+  }
+
+  .next{
+    margin-right: 2%;
+  }
+}
+
+@media (max-width:376px){
+  img{
+    height: 1%;
+    margin-top: 33%;
+  }
+
+  .prev , .next{
+    margin-top: 10%;
+  }
+}
+
+
+
+
