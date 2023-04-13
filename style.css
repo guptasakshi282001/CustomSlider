@@ -101,6 +101,17 @@ img {
   }
 }
 
+@media (max-width:321px){
+  .dot{
+    width: 10px;
+    height: 10px;
+  }
+
+  .dots{
+    margin-left: 30%;
+  }
+}
+
 
 
 
