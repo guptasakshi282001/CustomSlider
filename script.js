@@ -1,4 +1,6 @@
 let slideIndex = 1;
+let slideInterval;
+
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -15,6 +17,7 @@ function showSlides(n) {
   let dots = document.getElementsByClassName("dot");
   let leftArrow = document.getElementsByClassName("prev")[0];
   let rightArrow = document.getElementsByClassName("next")[0];
+  let checkbox = document.getElementById("slideshow");
 
   // Hide left arrow on first slide
   if (n === 1) {
@@ -41,4 +44,18 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+  
+  // Handle automatic slide show
+  if (checkbox.checked) {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(() => plusSlides(1), 2000);
+  } else {
+    clearInterval(slideInterval);
+  }
 }
+
+// Add event listener to checkbox
+let checkbox = document.getElementById("slideshow");
+checkbox.addEventListener("change", () => {
+  showSlides(slideIndex);
+});
