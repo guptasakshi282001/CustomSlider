@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="slideshow-container">
+    <input type="checkbox" id="slideshow">Click here for the SlideShow View.
+    
+    <div class="mySlides fade">
+      <img src="images/01.jpg" alt="" width="1000px" height="500px">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="images/02.jpg" alt="" width="1000px" height="500px">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="images/03.jpg" alt="" width="1000px" height="500px">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="images/04.jpg" alt="" width="1000px" height="500px">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/05.jpg" alt="" width="1000px" height="500px">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="images/06.jpg" alt="" width="1000px" height="500px">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  
+  <br>
+  
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+    <span class="dot" onclick="currentSlide(6)"></span> 
+  </div>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
